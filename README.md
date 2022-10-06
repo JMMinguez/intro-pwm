@@ -13,9 +13,10 @@ En la placa nos podemos encontrar 8 elementos y conectores diferentes:
 7. **Micro USB**: se necesita un voltaje de entrada de 5V y un mínimo de 2,5A.
 8. **Ranura para microSD**: lugar donde la Raspberry tiene instalado su sistema operativo además de donde se almacenará todos los documentos, programas...
 
-![alt text](https://github.com/rsanchez2021/Image/blob/main/interfazRaspberryPi.jpg "Elementos e interfaz")
+![Elementos e interfaz](https://github.com/rsanchez2021/Image/blob/main/interfazRaspberryPi.jpg "Elementos e interfaz")
 
 Esta misma imagen se puede ver con facilidad en el terminal con el comando **pinout**
+![Pinout en terminal](
 
 ## 3. Instalación del Sistema Operativo
 Para instalarlo necesitamos la tarjeta microSD. En ella hay que descargar e instalar una imagen del sistema operativo, en este caso: Raspberry Pi OS. Primero hay que formatear la microSD con la herramienta de Discos de Linux. Como usuario y contraseña utilizaremos los mencionados en la guía de la práctica.
@@ -26,11 +27,11 @@ Todos los pines GPIO de la Raspberry Pi son **digitales**, de decir, la conexió
 ## 5. Instalación del LED
 Conexiones de un LED con la placa Raspberry Pi:
 
-![alt text](https://github.com/rsanchez2021/Image/blob/main/LED.PNG "Conexión LED")
+![Conexiones del LED](https://github.com/rsanchez2021/Image/blob/main/LED.PNG "Conexión LED")
 
 En la siguiente imagen podemos ver cómo se ha conectado el LED a la placa para esta primera práctica:
 
-![alt text](https://github.com/rsanchez2021/Image/blob/main/p1.PNG "Disposición del LED")
+![Primer circuito](https://github.com/rsanchez2021/Image/blob/main/p1.PNG "Disposición del LED")
 
 ## 6. Manejo básico del LED mediante terminal
 ```bash
@@ -54,13 +55,16 @@ input (“ Ejecutando hasta que pulse una tecla”) #fuerza a para la ejecución
 pwm.stop ()
 GPIO.cleanup ()
 ```
-En caso de querer cambiar el ciclo de trabajo, se puede hacer utilizando el comando: 
+En caso de querer cambiar el ciclo de trabajo,teniendo en cuenta que el máximo es 100 (100%), se puede hacer utilizando el comando: 
 ```python
 pwm.ChangeDutyCycle (1)
 ```
-Teniendo en cuenta que el máximo es 100 (100%). Por otro lado, si queremos  cambiar la frecuencia se puede hacer con el comando:
+Por otro lado, si queremos  cambiar la frecuencia se puede hacer con el comando:
 ```python
 pwm.ChangeFrequency (1000)
 ```
 
 Por último, es importante que al ejecutar el programa desde la terminal se utilice **python3**
+```bash
+python3 LED.py
+```
